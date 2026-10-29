@@ -1,0 +1,74 @@
+Crie um formulário de cadastro com os campos nome (texto), e-mail (email), idade (number, de 1 a 120) e curso (<select> com 3 opções). Todos devem ser obrigatórios usando os atributos de validação nativa do HTML (required, min, max).
+Ao enviar:
+• Trate o evento submit no formulário (não no botão) e chame evento.preventDefault() para a página não recarregar.
+• Colete os dados com new FormData(formulario) e transforme-os em um objeto percorrendo com for...of.
+• Exiba o objeto convertido com JSON.stringify(objeto, null, 2) dentro de um <pre id="json">
+• Adicione uma linha em uma tabela (<table>) abaixo do formulário com os dados cadastrados.
+Atenção: lembre-se de que o FormData só coleta campos que possuem o atributo name.
+Sugestão de style:
+
+<style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      margin: 20px;
+
+    }
+
+    form {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+
+      max-width: 350px;
+
+    }
+
+    input, select, button {
+
+      padding: 8px;
+
+    }
+
+    table {
+
+      margin-top: 20px;
+
+      border-collapse: collapse;
+
+      width: 100%;
+
+    }
+
+    th, td {
+
+      border: 1px solid gray;
+
+      padding: 8px;
+
+      text-align: left;
+
+    }
+
+    #mensagem {
+
+      color: red;
+
+    }
+
+    pre {
+
+      background-color: #eee;
+
+      padding: 10px;
+
+      overflow-x: auto;
+
+    }
+
+  </style>
